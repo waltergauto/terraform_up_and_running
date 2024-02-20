@@ -26,14 +26,14 @@ resource "aws_security_group" "instance" {
 
 ### Deploy an Amazon Linux 2023 AMI
 resource "aws_instance" "example"{
-  ami = "ami-0e731c8a588258d0d"
+  ami = "ami-06aa3f7caf3a30282"
   instance_type = "t2.micro"
   # Pass security group instance created before to ec2 instance
   vpc_security_group_ids = [aws_security_group.instance.id]
  
   user_data = <<-EOF
               #!/bin/bash
-              echo "Hello, World!" > index.xhtml
+              busybox echo "Hello, World!" >> index.html
               nohup busybox httpd -f -p 8080 &
               EOF
   user_data_replace_on_change = true
