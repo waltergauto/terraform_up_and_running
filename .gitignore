@@ -1,5 +1,5 @@
-/chapter_2/.terraform*
-/chapter_2/terraform*
-/chapter_2/*.tfstate
-/chapter_2/*.tfstate.backup
+/chapter_2/*/.terraform*
+/chapter_2/*/terraform*
+/chapter_2/*/*.tfstate
+/chapter_2/*/*.tfstate.backup
 cred
